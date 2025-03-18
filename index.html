@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="script" href="index.js">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Spam Message Detector</h1>
+            <p>Enter a message below to check if it's spam or not</p>
+        </div>
+        
+        <div class="form-group">
+            <label for="messageInput">Message:</label>
+            <textarea id="messageInput" placeholder="Enter the message you want to check..."></textarea>
+        </div>
+        
+        <button id="checkButton">Check Message</button>
+        
+        <div class="loading" id="loadingIndicator">
+            Analyzing message...
+        </div>
+        
+        <div class="result" id="resultContainer">
+            <div class="result-header">
+                <span class="result-icon" id="resultIcon">🔍</span>
+                <h2 id="resultTitle">Result</h2>
+            </div>
+            
+            <p id="resultMessage"></p>
+            
+            <div class="result-details">
+                <h3>Probability Analysis:</h3>
+                
+                <div>
+                    <strong>Spam Probability:</strong>
+                    <div class="progress-container">
+                        <div class="progress-bar spam-bar" id="spamBar"></div>
+                    </div>
+                    <span id="spamProbability">0%</span>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <strong>Ham (Not Spam) Probability:</strong>
+                    <div class="progress-container">
+                        <div class="progress-bar ham-bar" id="hamBar"></div>
+                    </div>
+                    <span id="hamProbability">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
